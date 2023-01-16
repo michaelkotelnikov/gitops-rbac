@@ -1,15 +1,15 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: mariadb-argocd
-  namespace: openshift-gitops
+  name: rbac-app-argocd
+  namespace: nikita-gitops
 spec:
   destination:
-    name: local-cluster
-  project: demo-project-argocd
+    name: ocp411-dev
+  project: default
   source:
-    path: 04.Application-Lifecycle/demo-argocd/mariadb-resources/local-cluster
-    repoURL: https://github.com/michaelkotelnikov/rhacm-workshop
+    path: application-resources/ocp411-dev
+    repoURL: https://github.com/michaelkotelnikov/gitops-rbac
     targetRevision: master
   syncPolicy:
     automated:
