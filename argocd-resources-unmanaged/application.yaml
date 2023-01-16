@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: rbac-app-argocd-unmanaged
+  namespace: nikita-gitops
+spec:
+  destination:
+    name: ocp411-dev
+  project: default
+  source:
+    path: application-resources/ocp411-dev-unmanaged
+    repoURL: https://github.com/michaelkotelnikov/gitops-rbac
+    targetRevision: master
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: true
