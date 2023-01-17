@@ -5,10 +5,10 @@ metadata:
   namespace: nikita-gitops
 spec:
   destination:
-    name: in-cluster
+    name: ocp411-dev
   project: default
   source:
-    path: application-resources/in-cluster
+    path: application-resources/ocp411-dev
     repoURL: https://github.com/michaelkotelnikov/gitops-rbac
     targetRevision: master
   syncPolicy:

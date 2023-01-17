@@ -2,7 +2,7 @@ apiVersion: apps.openshift.io/v1
 kind: DeploymentConfig
 metadata:
   name: mariadb
-  namespace: mariadb
+  namespace: nikita-gitops
   labels:
     app: mariadb
     type: database
